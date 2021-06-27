@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FirstExam
+namespace MyFirstExam
 {
-    public partial class Form1 : Form
+    public partial class FoundsCalculator : Form
     {
-        public Form1()
+        public FoundsCalculator()
         {
             InitializeComponent();
         }
