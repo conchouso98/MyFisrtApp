@@ -11,8 +11,8 @@ public class CSV_Data
     {
         
         public DateTime Fecha { get; set; }
-        public float Cierre { get; set; }
-        public float Apertura { get; set; }
+        public double Cierre { get; set; }
+        public double Apertura { get; set; }
 
        
 
