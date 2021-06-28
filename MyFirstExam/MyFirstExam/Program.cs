@@ -51,12 +51,12 @@ namespace MyFirstExam
                     {
                         continue;
                     }
-                    double stockstobuy = Math.Round((50d * 0.98d) / buyData.Apertura, 3);
+                    double stockstobuy = Math.Round((50d * 0.98d) / Math.Round(buyData.Apertura,3), 3);
                     Console.WriteLine("El dia " + allthursday.Last()   + " compro " + stockstobuy + " a " + buyData.Apertura);
                     stockAmount += stockstobuy;
                 }
             }
-            double totalCapital = stockAmount * data.Last().Cierre;
+            double totalCapital = Math.Round(stockAmount * data.Last().Cierre, 3);
             Console.WriteLine(totalCapital);
         }
         public static List<CSV_Data> GetCSV_Datas()
@@ -73,8 +73,7 @@ namespace MyFirstExam
                 };
                 using (var csvReader = new CsvReader(streamReader, csvConfig))
                 {
-                    //var records = csvReader.GetRecords<dynamic>().ToList();
-                    records = csvReader.GetRecords<CSV_Data>().ToList();
+                   records = csvReader.GetRecords<CSV_Data>().ToList();
                 }
             }
             return records;
